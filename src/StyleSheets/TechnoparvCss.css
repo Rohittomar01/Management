@@ -1,0 +1,206 @@
+.ribinbgtechno {
+  background-image: url('https://www.svgheart.com/wp-content/uploads/2021/11/text-divider-decorative-frame-decoration-free-svg-file-SvgHeart.Com.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 5.2rem;
+
+
+}
+
+.abouth1colortechno {
+  font-size: 2.5rem;
+  color: darkslategrey;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+
+}
+
+
+.main-back-conttechno
+{
+  /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 80%); */
+  background: #ff0f7b;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+.main-conttechno{
+  position: relative;
+ 
+  
+}
+.imgtechno{
+
+    float: left;    
+     margin: 10px 90px 50px 10px;
+     width: 40%;
+    /* margin-bottom: 100px; */
+    
+}
+.img-2techno{
+  width: 30%;
+  position: absolute;
+  left: 24%;
+  top: 42%;
+  /* display: none; */
+}
+.img-headingtechno
+{
+  font-family: 'Matter,Helvetica,Arial,sans-serif';
+  font-size: 1.2em;
+  text-align: center;
+  color: #fff;
+}
+.texttechno{
+
+  font-family: 'serif';
+  text-align: justify;
+  
+  font-size: 1.2rem;
+   line-height: 1.2rem;
+   letter-spacing: 1;
+   font-weight: 300;
+    font-style: normal;
+    
+}
+
+
+
+@media screen and (max-width:735px) {
+
+  /* ***************************************USED FOR HEADINGS******************************************* */
+  .abouth1colortechno {
+    font-size: 1.6rem;
+    color: darkslategrey;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 40px;
+    border: 2px solid black;
+
+  }
+
+  .ribinbgtechno {
+    height: 5rem;
+  }
+
+  /* ******************************************************************************************************** * */
+
+} 
+
+
+@media (min-width:320px) and (max-width: 426px) {
+ 
+  .abouth1colortechno {
+    font-size: 2.5rem;
+    color: darkslategrey;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 20vh;
+  
+  }
+
+.main-back-conttechno
+{
+  /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 80%); */
+  background: #ff0f7b;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+.main-conttechno{
+  position: relative;
+ 
+  
+}
+.imgtechno{
+
+    float: left;    
+     margin: 140px 60px 50px 10px;
+     width: 70%;
+    /* margin-bottom: 100px; */
+    
+}
+.img-2techno{
+  width: 80%;
+  position: absolute;
+  left: 58%;
+  top: 48%;
+  /* display: none; */
+}
+.img-headingtechno
+{
+  font-family: 'Matter,Helvetica,Arial,sans-serif';
+  font-size: 1.2em;
+  text-align: center;
+  color: #fff;
+}
+.texttechno{
+
+  font-family: 'Matter,Helvetica,Arial,sans-serif';
+  text-align: justify;
+   color: #fff;
+  font-size: 0.8rem;
+   line-height: 1rem;
+   letter-spacing: 1;
+   font-weight: 300;
+    font-style: normal;
+    
+}
+
+.main-back-cont-reversetechno
+{
+  background-image: linear-gradient(to left, #c471f5 0%, #ff21cd 50%);
+  height: 100%;
+  padding: 20px;
+  /* margin-top: 2%; */
+  display: flex;
+  align-items: center;
+}
+
+.main-cont-reversetechno{
+  position: relative;
+ 
+}
+
+.img-reversetechno{
+
+  float: right;    
+   margin: 10px 50px 60px 10px;
+   width: 70%;
+   /* margin-bottom: 130px; */
+  
+}
+.img-2-reversetechno{
+width: 48%;
+position: absolute;
+right: 50%;
+top: 14%;
+/* display: none; */
+}
+.img-heading-righttechno
+{
+font-family: 'Matter,Helvetica,Arial,sans-serif';
+font-size: 1.2em;
+text-align: center;
+color: #fff;
+}
+.text-righttechno{
+
+font-family: 'Matter,Helvetica,Arial,sans-serif';
+text-align: justify;
+/* text-overflow: clip; */
+flex-wrap: wrap;
+ color: #fff;
+font-size: 0.8rem;
+ line-height: 1rem;
+ letter-spacing: 1;
+ font-weight: 300;
+  font-style: normal;
+  
+}
+
+}

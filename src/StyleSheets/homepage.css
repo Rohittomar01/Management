@@ -1,0 +1,784 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+body {
+  background-color: rgb(247 247 247);
+}
+
+.navbg {
+  /* background-color: cornflowerblue; */
+  color: #fff;
+}
+
+.navcolor {
+  background-color: #000;
+}
+
+/* -----------------------------------------------------------ribin------------------------------------------------------------ */
+.ribinbg {
+  background-image: url('https://www.svgheart.com/wp-content/uploads/2021/11/text-divider-decorative-frame-decoration-free-svg-file-SvgHeart.Com.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 6rem;
+
+
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+.abouth1color {
+  font-size: 3rem;
+  color: darkslategrey;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+
+}
+
+.c {
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
+
+
+
+.abouth2 {
+  margin-left: 4%;
+  margin-top: 20%;
+  font-family: 'Playfair Display', serif;
+  color: rgb(61, 89, 89);
+  font-size: 4rem;
+  line-height: 75%;
+
+
+
+}
+
+.aboutp {
+  margin-left: 4%;
+  margin-top: 9%;
+  /* border: solid red; */
+  color: gray;
+}
+
+
+
+.maincsvg {
+
+  margin-top: 40%;
+}
+
+/* .aboutimgbg{
+    background-image: url('/images/aboutbgimg.png');
+  } */
+.aboutdiv {
+  /* overflow: hidden; */
+  height: 35rem;
+
+}
+
+.eventp {
+  font-weight: 700;
+  color: darkslategrey;
+  font-size: larger;
+}
+
+/* .mainbtn {
+  margin-top: 30%;
+  margin-left: 40%;
+  height: 8%;
+  width: 14%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color:;
+} */
+
+/* -------------------------sponser-------------------------------------- */
+.sponsor {
+  width: auto;
+  height: auto;
+  background-image: url("https://liveeventproductions.co.uk/wp-content/uploads/2018/01/event-production-services-live-event-productions-banner-image-4.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* position: sticky; */
+  /* border: solid red; */
+
+}
+
+.sponsercolor {
+
+  background-color: rgba(12, 3, 66, 0.781);
+  height: auto;
+  position: relative;
+}
+
+.sponsor h1 {
+  padding: 5rem 0 0 0;
+  font-size: 3.5rem;
+  color: aliceblue;
+  font-family: 'Playfair Display', serif;
+}
+
+.sponserlogo {
+  margin-top: 5rem;
+
+}
+
+.sponsorimg {
+  margin-bottom: 5rem;
+}
+
+.title {
+  margin-top: 4%;
+  font-size: 10rem;
+  margin-left: 8%;
+  font-family: "Tilt Prism";
+  /* font-family: "poppins"; */
+  color: antiquewhite;
+  text-transform: capitalize;
+}
+
+.title p {
+  font-size: 2rem;
+  margin-left: 52%;
+  margin-top: -4%;
+}
+
+
+
+
+
+
+
+
+
+/* ****************************************USE FOR ABOUT EVENT PLAY BUTTON************************************************* */
+
+.pinkBg {
+
+  background-color: #ed184f !important;
+  background-image: linear-gradient(90deg, #fd5581, #fd8b55);
+}
+
+.intro-banner-vdo-play-btn {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  text-align: center;
+  border-radius: 100px;
+  z-index: 1
+}
+
+.intro-banner-vdo-play-btn i {
+  line-height: 65px;
+  font-size: 30px
+}
+
+.intro-banner-vdo-play-btn .ripple {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  margin: -80px 0 0 -80px;
+  border-radius: 100px;
+  -webkit-animation: ripple 1.8s infinite;
+  animation: ripple 1.8s infinite
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+.intro-banner-vdo-play-btn .ripple:nth-child(2) {
+  animation-delay: .3s;
+  /* -webkit-animation-delay:.3s */
+
+}
+
+.intro-banner-vdo-play-btn .ripple:nth-child(3) {
+  animation-delay: .6s;
+  /* -webkit-animation-delay:.6s */
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box
+}
+
+/* ************************************************************************************************************** */
+
+
+/* *************************MEDIA QUERY***************************************** */
+
+@media (min-width:320px) and (max-width:359px) {
+
+
+
+  /* ************************************USED FOR TITLE*************************************** */
+  .title {
+    font-size: 1.9em;
+    margin-left: 7%;
+  }
+
+  .title p {
+    font-size: 1rem;
+    margin-left: 55%;
+  }
+
+  /* *********************************************************************************************** */
+
+  /* ***************************************USED FOR HEADINGS******************************************* */
+  .abouth1color {
+    font-size: 1rem;
+    color: darkslategrey;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+
+  }
+
+  /* .ribinbg {
+    height: 1rem;
+  } */
+
+  /* ******************************************************************************************************** */
+
+
+  /* *********************************USED FOR ABOUT SECTION*************************************************** */
+
+  .aboutdiv {
+    height: 23rem;
+
+  }
+
+  .abouth2 {
+    font-size: 1.5rem;
+    line-height: 1%;
+  }
+
+  #about_avatar_01{
+    height:70vh;
+    width: 100%;
+  }
+
+  #about_avatar_02{
+    height:55%;
+    width: 75%;
+    margin-top: 12%;
+  }
+
+  .abouth2 {
+    margin-top: -11vh;
+    font-size: 2.2rem;
+    line-height: 95%;
+    /* margin-left: 10%; */
+
+  }
+
+  .aboutp {
+
+    font-size: 0.8rem;
+    line-height: 3.2vh;
+  }
+  .intro-banner-vdo-play-btn {
+    margin-left: -20%;
+    margin-top: -35%;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:360px) and (max-width:479px) {
+
+
+
+  /* ************************************USED FOR TITLE*************************************** */
+  .title {
+    font-size: 1.9em;
+    margin-left: 7%;
+  }
+
+  .title p {
+    font-size: 1rem;
+    margin-left: 55%;
+  }
+
+  /* *********************************************************************************************** */
+
+  /* ***************************************USED FOR HEADINGS******************************************* */
+  .abouth1color {
+    font-size: 1rem;
+    color: darkslategrey;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+
+  }
+
+  /* .ribinbg {
+    height: 1rem;
+  } */
+
+  /* ******************************************************************************************************** */
+
+
+  /* *********************************USED FOR ABOUT CIRCLEPIC*************************************************** */
+
+  .aboutdiv {
+    height: 23rem;
+
+  }
+
+  .abouth2 {
+    font-size: 1.5rem;
+    line-height: 1%;
+  }
+
+
+
+}
+
+
+
+
+@media (min-width:425px) and (max-width:784px) {
+
+  /* ************************************USED FOR TITLE*************************************** */
+  .title {
+    font-size: 2em;
+    margin-left: 16%;
+  }
+
+  .title p {
+    font-size: 1rem;
+  }
+  /* **************************************************************************************************** */
+
+
+  /* *********************************************USED FOR ABOUT SECTION*************************************** */
+  .abouth2 {
+    margin-top: -0vh;
+    font-size: 2.3rem;
+    line-height: 95%;
+
+  }
+
+  .aboutp {
+
+    font-size: 1rem;
+    line-height: 3.2vh;
+  }
+  .intro-banner-vdo-play-btn {
+    margin-left: -20%;
+    margin-top: -35%;
+  }
+  .aboutcircle {
+    width: 100%;
+  }
+/* ****************************************************************************************************** */
+
+/* ****************************************USED FOR HOME PAGE HEADINGS******************************************* */
+  .abouth1color {
+    font-size: 0.9rem;
+    color: darkslategrey;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+
+  }
+  /* *********************************************************************************************** */
+}
+
+
+@media(min-width:768px) and (max-width:1023px) {
+
+  /* **********************************USED FOR EVENT BUTTON AND EVENT HEADING H2*************************** */
+  .pinkBg {
+    margin-left: -20%;
+    margin-top: 5%;
+  }
+
+  .intro-banner-vdo-play-btn {
+    height: 108px;
+    width: 14VW;
+    margin-left: 120%;
+    margin-top: 40%;
+  }
+
+  #btnsize {
+    width: 20%
+  }
+
+  .playarrowicon {
+
+    margin-top: 34%;
+    height: 10%;
+
+  }
+
+  .abouth2 {
+    font-size: 3em;
+    line-height: 95%;
+
+  }
+ 
+  .aboutcircle {
+    width: 100%;
+  }
+
+  .abouth2 {
+    margin-left: 5%;
+    font-size: 3.7rem;
+    line-height: 95%;
+
+  }
+
+  .aboutp {
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 1.4rem;
+    line-height: 3.9vh;
+  }
+
+ 
+  /* ************************************USED FOR TITLE*************************************** */
+  .title {
+    font-size: 2.7em;
+    margin-left: 11%;
+  }
+
+  .title p {
+    font-size: 1.7rem;
+    margin-left: 55%;
+  }
+
+  /* *********************************************************************************************** */
+
+
+  /* ***********************************USED FOR NAV BAR **************************************** */
+  #navbar {
+    margin-left: 18%;
+
+  }
+  /* ********************************************************************************************** */
+
+}
+
+
+
+
+@media(min-width:1024px) and (max-width:1439px) {
+
+  /* **********************************USED FOR ABOUT SECTION********************************************* */
+ 
+  .abouth2 {
+    font-size: 4.4em;
+    line-height: 95%;
+
+  }
+  .aboutp {
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 1.1rem;
+    line-height: 3.4vh;
+  }
+  .intro-banner-vdo-play-btn {
+   
+    margin-top: 10%;
+  }
+
+  #btnsize {
+    width: 12%
+  }
+
+  
+
+
+
+  /* ************************************USED FOR TITLE*************************************** */
+  .title {
+    /* font-size: 3em; */
+    margin-left: 11%;
+  }
+
+  .title p {
+    font-size: 0.2em;
+    margin-left: 55%;
+  }
+
+  /* *********************************************************************************************** */
+
+
+  /* ***********************************USED FOR NAV BAR **************************************** */
+  #navbar {
+    margin-left: 45%;
+
+  }
+  /* ********************************************************************************************** */
+
+}
+
+
+
+
+
+
+@media(min-width:1440px) and (max-width:2559px) {
+
+  /* **********************************USED FOR EVENT BUTTON AND EVENT HEADING H2*************************** */
+  .pinkBg {
+    margin-left: -20%;
+    margin-top: 5%;
+  }
+
+  .abouth2 {
+
+    line-height: 90%;
+
+  }
+
+  /* ************************************USED FOR TITLE*************************************** */
+  .title {
+    font-size: 3.6em;
+    margin-left: 11%;
+  }
+
+  .title p {
+    font-size: 0.2em;
+    margin-left: 55%;
+  }
+
+  /* *********************************************************************************************** */
+
+
+
+  /* ****************************************USED FOR ABOUT SECTION************************************* */
+  .intro-banner-vdo-play-btn {
+    height: 115px;
+    width: 180px;
+  
+  }
+
+  #btnsize {
+    width: 8%
+  }
+
+  .playarrowicon {
+
+    margin-top: 35%;
+    height: 12%;
+
+  }
+
+
+  /* ****************************************************************************************************** */
+
+   /* ***********************************USED FOR NAV BAR **************************************** */
+   #navbar {
+    margin-left: 55%;
+
+  }
+  /* ********************************************************************************************** */
+}
+
+
+
+
+@media(min-width:2560px) {
+
+  /* **********************************USED FOR EVENT BUTTON AND EVENT HEADING H2*************************** */
+  .pinkBg {
+    margin-left: -20%;
+    margin-top: 5%;
+  }
+
+  .intro-banner-vdo-play-btn {
+    height: 75px;
+    width: 100VW;
+  }
+
+  .abouth2 {
+    font-size: 7.3rem;
+    line-height: 95%;
+
+  }
+
+  .aboutp {
+    font-size: 2.2rem;
+    line-height: 3.2vh;
+  }
+
+  /* ************************************USED FOR TITLE*************************************** */
+  .title {
+    font-size: 5em;
+    margin-left: 11%;
+  }
+
+  .title p {
+    font-size: 5rem;
+    margin-left: 55%;
+  }
+
+  /* *********************************************************************************************** */
+
+  /* ***********************************USED FOR NAV BAR **************************************** */
+  #navbar {
+    margin-left: 50%;
+    /* font-size: 100px; */
+
+  }
+  #nav_list{
+    font-size: 3rem;
+    margin-left: 90px;
+  }
+  /* ********************************************************************************************** */
+  #user_acount_icon{
+    font-size: 3rem;
+    margin-left: 340px;
+    margin-top: -2%;
+  }
+
+   /* ****************************************USED FOR ABOUT SECTION************************************* */
+   .intro-banner-vdo-play-btn {
+    height: 185px;
+    width: 185px;
+  
+  }
+
+  #btnsize {
+    width: 8%
+  }
+
+  .playarrowicon {
+
+    margin-top: 50%;
+    /* height: 122vh; */
+   
+
+  }
+
+  #about_avatar_01{
+    height:50vh;
+    width: 80%;
+  }
+
+  #about_avatar_02{
+    height:40%;
+    width: 37%;
+    margin-top: 5%;
+  }
+
+
+  /* ****************************************************************************************************** */
+/* ****************************************USED FOR HOME PAGE HEADINGS******************************************* */
+#Allheading {
+  font-size: 7rem;
+  color: darkslategrey;
+   font-family: 'Playfair Display', serif;
+  font-weight: 600;
+
+}
+/* #aboutevent{
+  margin-top: 5%;
+  background-color: #fd5581;
+  height: 15vh;
+} */
+
+.ribinbg {
+  /* background-image: url('https://www.svgheart.com/wp-content/uploads/2021/11/text-divider-decorative-frame-decoration-free-svg-file-SvgHeart.Com.png');
+   */
+   background-image: none;
+  background-size: 100% 130%;
+  background-repeat: no-repeat;
+  height: 8rem;
+
+
+}
+/* *********************************************************************************************** */
+
+
+/* *******************************USED FOR EVENT LOGO************************************************ */
+
+#events_logo{
+
+  margin-top: 5vh;
+  height: 20vh;
+  width: 20vw;
+
+}
+
+#events_name{
+  font-size: 3.5rem;
+  margin-top: 2vh;
+}
+
+
+/* ***************************************************************************************************** */
+
+
+/* ***********************************************USED FOR SPONSOR SECTION****************************** */
+
+#sponsor_img{
+  height: 17vh;
+  width: 20vw;
+  margin-bottom: 1vh;
+}
+
+#sponsor_heading{
+  margin-top: 10vh;
+  font-size: 10px;
+}
+#sponsor{
+  font-size: 10rem;
+}
+
+
+
+/* **************************************************************************************************** */
+
+
+/* used for space  */
+#spacer{
+  margin-top: 10vh;
+}
+
+
+}

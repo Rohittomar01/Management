@@ -1,0 +1,131 @@
+style.cssCSS
+/* Code By Webdevtrick ( https://webdevtrick.com ) */
+/* #html {
+    height: 100%;
+    width: 10%;
+    background: radial-gradient(ellipse at bottom, #1b2735a5 0%, #090a0fa4 100%);
+    overflow: hidden;
+} */
+
+/* body {
+  background: transparent;
+  color:black;
+} */
+
+/* .bluelight {
+    text-shadow: 0 0 10px #3498DB,
+        0 0 20px #3498DB,
+        0 0 30px #3498DB,
+        0 0 40px #2980B9,
+        0 0 70px #2980B9,
+        0 0 80px #2980B9,
+        0 0 100px #2980B9,
+        0 0 150px #2980B9;
+} */
+
+/* .clock {
+    overflow: hidden;
+    height: 20%;
+} */
+
+/* .col-md-12 {
+    overflow: hidden;
+    padding-bottom: 20px;
+} */
+
+/* .top-section {
+    margin-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #575e34;
+    border: 0px;
+    background-image: url("https://www.freepnglogos.com/uploads/circle-png/red-circle-hq-transparent-background-24.png");
+
+} */
+
+/* .bottom-section { */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 10%; */
+    /* border-radius: 100px;  */
+    /* background-color:blanchedalmond; */
+
+    /* width: 100%; */
+    /* height: 60vh; */
+    /* z-index: 2; */
+/* } */
+
+#text {
+   color: black;
+    font-size: 25px;
+    font-weight: 600;
+    background-image: url("https://www.freepnglogos.com/uploads/circle-png/red-circle-hq-transparent-background-24.png");
+}
+
+/* #image{
+    background-image: url("https://www.freepnglogos.com/uploads/circle-png/red-circle-hq-transparent-background-24.png");
+} */
+
+.text-center {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container {
+    height: auto;
+    width: 20%;
+}
+
+/* @media (min-width: 768px) {
+    .num {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .num {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .num {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .text {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .text {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 15px;
+    }
+}
+
+/* @media (min-width: 768px) {
+    body {
+        padding-top: 75px;
+    }
+} */
+
+#h1 {
+    padding-top: 10px;
+   
+}
+
+/* @media (min-width: 768px) {
+    h1 {
+        margin-bottom: 75px;
+        font-size: 100px;
+    }
+} */

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;&family=Roboto:wght@300;400;700;900&display=swap');
+        *{
+            margin: 0;padding: 0;
+            font-size: 16px;
+            /* font-family: 'Poppins', sans-serif; */
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            background-color: black;
+            color: #fff;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+           
+        }
+        .container ul .heading1{
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            padding-right:280px;
+            display: inline;
+        }
+        .container ul .heading1 span{
+            font-weight: lighter;
+            font-size: 1.5rem;
+        }
+        .container ul a{
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 12px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        .container1{
+            display: flex;
+            width: 100%;
+            padding: 4% 2%;
+            box-sizing: border-box;
+            height: 60vh;
+        }
+         .img-container{
+            flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+        }
+        .img-container > img{
+            width: 200%;
+    height: calc(100% - 10vh);
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: 0.5s;
+        }
+        .img-container > span {
+            font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+  .img-container:hover {
+    flex: 1 1 25%;
+  }
+  .img-container:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+  
+    </style>
+</head>
+<body>
+    <header class="container">
+        <ul>
+            <div class="heading1">event's<span> gallery</span></div>
+            <a href="#">home</a>
+            <a href="#">about us</a>
+            <a href="#">gallery</a>
+            <a href="#">event's</a>
+            <a href="#">sponser</a>
+            <a href="#">register</a>
+            <a href="#">contact</a>
+        </ul>
+    </header>
+    <div class="container1">
+        <div class="img-container">
+                <img src="/image/12.jpeg" alt="" srcset="">
+                <span>2016</span>
+        </div>
+        <div class="img-container">
+            <img src="/image/12.jpeg" alt="" srcset="">
+            <span>2016</span>
+    </div>
+    <div class="img-container">
+        <img src="/image/12.jpeg" alt="" srcset="">
+        <span>2016</span>
+</div>
+<div class="img-container">
+    <img src="/image/12.jpeg" alt="" srcset="">
+    <span>2016</span>
+</div>
+    </div>
+</body>
+</html>
