@@ -33,11 +33,14 @@ import Table_P from "./Component/Tablefor_p";
 import ViewAll_TechnoSchedule from "./TechnoparvComponent/technoschedule/viewall_schedules/ViewAll_TechnoSchedule";
 import ViewAll_VilaySchedule from "./VilayComponent/VilayComponent/vilayschedule/viewall_schedules/ViewAll_VilaySchedule";
 import HomeEvent_Cards from "./Component/administrator/HomeEvents/HomeEvent_Cards/HomeEvent_Cards";
+import SubEvent from "./Component/administrator/DashboardComponent/SubEventDetailForm/SubEvent";
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route element={<Table_P />} path={"/Table_P"}></Route>
+        <Route element={<SubEvent />} path={"/SubEvent"}></Route>
         <Route element={<EventCard01 />} path={"/EventCard01"}></Route>
         <Route element={<OurTeam />} path={"/OurTeam"}></Route>
         <Route element={<UserProfile />} path={"/UserProfile"}></Route>
@@ -87,12 +90,16 @@ function App() {
 
         <Route element={<DjNight />} path={"/DjNight"}></Route>
         <Route element={<SportEvent />} path={"/SportEvent/*"}></Route>
-        <Route element={<ViewAll_TechnoSchedule />} path={"/ViewAll_TechnoSchedule"}></Route>
-        <Route element={<ViewAll_VilaySchedule />} path={"/ViewAll_VilaySchedule"}></Route>
+        <Route
+          element={<ViewAll_TechnoSchedule />}
+          path={"/ViewAll_TechnoSchedule"}
+        ></Route>
+        <Route
+          element={<ViewAll_VilaySchedule />}
+          path={"/ViewAll_VilaySchedule"}
+        ></Route>
         <Route element={<HomeEvent_Cards />} path={"/HomeEvent_Cards"}></Route>
-
       </Routes>
-
     </Router>
   );
 }
