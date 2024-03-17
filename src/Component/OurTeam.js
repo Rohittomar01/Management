@@ -1,5 +1,5 @@
 import { Avatar } from "@mui/material"
-import "D:/managementApp/src/StyleSheets/OurTeamCss.css"
+import "../StyleSheets/OurTeamCss.css"
 
 
 

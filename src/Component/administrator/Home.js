@@ -190,7 +190,15 @@ export default function Homepage() {
             style={{ width: "90%" }}
           >
             <Box sx={{ flexGrow: 1 }}>
-              <AppBar position="fixed" sx={{ background: "#ff5e57" }}>
+              <AppBar
+                position="fixed"
+                sx={{
+                  background: "#bc4e9c",
+                  background:
+                    "-webkit-linear-gradient(to right, #bc4e9c, #f80759",
+                  background: "linear-gradient(to right, #bc4e9c, #f80759)",
+                }}
+              >
                 <Toolbar variant="dense">
                   <IconButton
                     edge="start"
@@ -250,7 +258,7 @@ export default function Homepage() {
                             width: 550,
                           }}
                         >
-                          <a style={{ textDecoration: "none" }} href="homepage">
+                          {/* <a style={{ textDecoration: "none" }} href="homepage">
                             <span id="nav_list" className={classes.headeritem}>
                               Home
                             </span>
@@ -262,7 +270,7 @@ export default function Homepage() {
                             <span id="nav_list" className={classes.headeritem}>
                               About
                             </span>
-                          </a>
+                          </a> */}
                           <a style={{ textDecoration: "none" }} href="#events">
                             <span id="nav_list" className={classes.headeritem}>
                               Events
@@ -386,7 +394,10 @@ export default function Homepage() {
                   style={{
                     wordSpacing: "1%",
                     fontWeight: "bold",
-                    background: "#ff5e57",
+                    background: "#bc4e9c",
+                    background:
+                      "-webkit-linear-gradient(to right, #bc4e9c, #f80759",
+                    background: "linear-gradient(to right, #bc4e9c, #f80759)",
                     cursor: "pointer",
                     zIndex: 2,
                   }}
@@ -509,13 +520,22 @@ export default function Homepage() {
             <Zoom>
               <div className="col-lg-5 p">
                 <h2 className='abouth2   data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="slide-out-right"'>
-                  this is the summary of events
+                  A Journey Beyond Academics
                 </h2>
                 <p className="aboutp">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque, itaque quasi quidem adipisci suscipit ab ex doloremque
-                  tempora facere, vitae odit possimus magnam! Facilis dolorum
-                  iste enim suscipit cum! Delectus?
+                  College life is often anticipated with great excitement by
+                  young adults, as it promises a blend of education and
+                  entertainment. At IPS, we understand that the experiences
+                  gained through various fun activities and events are cherished
+                  for a lifetime. **Life @ IPS** is designed to create heartfelt
+                  and touching moments that students can share with friends and
+                  family. Throughout the academic year, we organize a diverse
+                  range of activities that contribute to the holistic
+                  development of our students. These events are not just about
+                  breaking free from the routine of studies; they are also about
+                  enhancing personality and fostering a sense of community. Join
+                  us at IPS for an enriching journey that extends well beyond
+                  the classroom.
                 </p>
               </div>
             </Zoom>

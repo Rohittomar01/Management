@@ -51,18 +51,20 @@ body {
   margin-top: 20%;
   font-family: 'Playfair Display', serif;
   color: rgb(61, 89, 89);
-  font-size: 4rem;
-  line-height: 75%;
+  font-size: 3rem;
+  line-height: 1.5;
 
-
+  /* text-wrap: nowrap; */
 
 }
 
 .aboutp {
   margin-left: 4%;
-  margin-top: 9%;
+  margin-top: 7%;
   /* border: solid red; */
   color: gray;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 

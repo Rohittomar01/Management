@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import "D:/managementApp/src/StyleSheets/GalleryCss.css"
+import "../../../StyleSheets/GalleryCss.css"
 import { useStyles } from "../HomePageCss";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
