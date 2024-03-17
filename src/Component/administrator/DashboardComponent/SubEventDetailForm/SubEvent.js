@@ -3,6 +3,9 @@ import { TextField, Button, Grid, Paper, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import Box from "@mui/material/Box";
+import Swal from "sweetalert2";
+import { postData } from "../../../../Services/ServerServices";
+
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -56,14 +59,118 @@ const SubEvent = () => {
     setEvents(newEvents);
   };
 
-  
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   let newErrors = {};
+  //   const allErrors = [];
+  //   const formData = new FormData();
 
-  const handleSubmit = (e) => {
+  //   console.log("Events:", events);
+  //   console.log("Image:", image);
+
+  //   events.forEach((event, index) => {
+  //     const errors = {};
+  //     if (!event.eventName) {
+  //       errors.eventName = "Event Name is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.description) {
+  //       errors.description = "Description is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.venue) {
+  //       errors.venue = "Venue is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.time) {
+  //       errors.time = "Time is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.date) {
+  //       errors.date = "Date is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.coordinatorName) {
+  //       errors.coordinatorName = "Coordinator Name is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.coordinatorNumber) {
+  //       errors.coordinatorNumber = "Coordinator Number is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.eventFee) {
+  //       errors.eventFee = "Event Fee is required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.rules) {
+  //       errors.rules = "Rules are required";
+  //       allErrors.push({ ...errors });
+  //     }
+  //     if (!event.avatar) {
+  //       errors.avatar = "Image is required";
+  //       allErrors.push({ ...errors });
+  //     }
+
+  //     // Append event data to FormData
+  //     formData.append("maineventname", maineventName);
+  //     formData.append(`events[${index}][eventName]`, event.eventName);
+  //     formData.append(`events[${index}][description]`, event.description);
+  //     formData.append(`events[${index}][venue]`, event.venue);
+  //     formData.append(`events[${index}][time]`, event.time);
+  //     formData.append(`events[${index}][date]`, event.date);
+  //     formData.append(
+  //       `events[${index}][coordinatorName]`,
+  //       event.coordinatorName
+  //     );
+  //     formData.append(
+  //       `events[${index}][coordinatorNumber]`,
+  //       event.coordinatorNumber
+  //     );
+  //     formData.append(`events[${index}][eventFee]`, event.eventFee);
+  //     formData.append(`events[${index}][rules]`, event.rules);
+  //     formData.append(`events[${index}][avatar]`, event.avatar);
+
+  //     newErrors[index] = errors;
+  //   });
+
+  //   // Append image to FormData
+  //   if (image) {
+  //     formData.append("image", image);
+  //   }
+  //   console.log("FormData:", formData);
+
+  //   if (allErrors.length === 0) {
+  //     var result = await postData("registration/mainevent", formData);
+  //     // ******************************************************************************************************************
+
+  //     // *******For Alert***********
+  //     if (result.status) {
+  //       Swal.fire({
+  //         icon: "success",
+  //         title: result.message,
+  //       });
+  //     } else {
+  //       Swal.fire({
+  //         icon: "success",
+  //         title: "Server Error",
+  //       });
+  //     }
+  //     // *****************************
+  //     // handleResetClick();
+  //   } else {
+  //     setErrors(newErrors);
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let newErrors = {};
     const allErrors = [];
     const formData = new FormData();
-  
+    const requestBody = {
+      events: [],
+    };
+
     console.log("Events:", events);
     console.log("Image:", image);
 
@@ -109,36 +216,59 @@ const SubEvent = () => {
         errors.avatar = "Image is required";
         allErrors.push({ ...errors });
       }
-  
+
       // Append event data to FormData
-      formData.append("maineventname",maineventName)
-      formData.append(`events[${index}][eventName]`, event.eventName);
-      formData.append(`events[${index}][description]`, event.description);
-      formData.append(`events[${index}][venue]`, event.venue);
-      formData.append(`events[${index}][time]`, event.time);
-      formData.append(`events[${index}][date]`, event.date);
-      formData.append(`events[${index}][coordinatorName]`, event.coordinatorName);
-      formData.append(`events[${index}][coordinatorNumber]`, event.coordinatorNumber);
-      formData.append(`events[${index}][eventFee]`, event.eventFee);
-      formData.append(`events[${index}][rules]`, event.rules);
-      formData.append(`events[${index}][avatar]`, event.avatar);
-  
+      requestBody.events.push({
+        eventName: event.eventName,
+        description: event.description,
+        venue: event.venue,
+        time: event.time,
+        date: event.date,
+        coordinatorName: event.coordinatorName,
+        coordinatorNumber: event.coordinatorNumber,
+        eventFee: event.eventFee,
+        rules: event.rules,
+        avatar: event.avatar,
+      });
       newErrors[index] = errors;
     });
-  
+
     // Append image to FormData
     if (image) {
-      formData.append('image', image);
+      requestBody.image = image;
     }
-    console.log("FormData:", formData);
-  
+    console.log("RequestBody:", requestBody);
+
     if (allErrors.length === 0) {
-      // Here you can proceed with form submission using formData
+      try {
+        const result = await postData("registration/mainevent", requestBody);
+        // const result = await response.json();
+
+        // Handle response
+        if (result) {
+          Swal.fire({
+            icon: "success",
+            title: result.message,
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Server Error",
+            text: result.error,
+          });
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Server Error",
+          text: "An error occurred while processing your request.",
+        });
+      }
     } else {
       setErrors(newErrors);
     }
   };
-  
 
   const handleAddEvent = () => {
     setEvents([
@@ -366,7 +496,8 @@ const SubEvent = () => {
                 <Grid item xs={6}>
                   {event.avatar && (
                     <Box>
-                      <strong style={{color:'red'}} >Selected Image:</strong> {event.avatar.name}
+                      <strong style={{ color: "red" }}>Selected Image:</strong>{" "}
+                      {event.avatar.name}
                     </Box>
                   )}
                 </Grid>

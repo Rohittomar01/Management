@@ -142,7 +142,15 @@ export default function Vilay() {
   return (
     <div style={{ overflow: "hidden" }}>
       <Box sx={{ flexGrow: 1 }} id="technoparv">
-        <AppBar position="fixed" sx={{ background: "#ff5e57", height: 50 }}>
+        <AppBar
+          position="fixed"
+          sx={{
+            background: "#bc4e9c",
+            background: "-webkit-linear-gradient(to right, #bc4e9c, #f80759",
+            background: "linear-gradient(to right, #bc4e9c, #f80759)",
+            height: 50,
+          }}
+        >
           <Toolbar variant="dense">
             <IconButton
               edge="start"

@@ -190,7 +190,14 @@ export default function Technoparv() {
   return (
     <div style={{ overflow: "hidden" }}>
       <Box sx={{ flexGrow: 1 }} id="technoparv">
-        <AppBar position="fixed" sx={{ background: "#ff5e57" }}>
+        <AppBar
+          position="fixed"
+          sx={{
+            background: "#bc4e9c",
+            background: "-webkit-linear-gradient(to right, #bc4e9c, #f80759",
+            background: "linear-gradient(to right, #bc4e9c, #f80759)",
+          }}
+        >
           <Toolbar variant="dense">
             <IconButton
               edge="start"
@@ -339,7 +346,7 @@ export default function Technoparv() {
             Schedule
           </h1>
         </div>
-        <div style={{marginTop:"5%"}}>
+        <div style={{ marginTop: "5%" }}>
           <TechnoSchedule />
         </div>
         <div>
