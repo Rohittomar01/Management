@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import Swal from "sweetalert2";
 import { postData } from "../../../../Services/ServerServices";
 
-
 const useStyles = makeStyles((theme) => ({
   formContainer: {
     display: "flex",
@@ -219,16 +218,18 @@ const SubEvent = () => {
 
       // Append event data to FormData
       requestBody.events.push({
-        eventName: event.eventName,
-        description: event.description,
-        venue: event.venue,
-        time: event.time,
-        date: event.date,
-        coordinatorName: event.coordinatorName,
-        coordinatorNumber: event.coordinatorNumber,
-        eventFee: event.eventFee,
-        rules: event.rules,
-        avatar: event.avatar,
+        eventName: (`events[${index}][eventName]`, event.eventName),
+        description: (`events[${index}][description]`, event.description),
+        venue: (`events[${index}][venue]`, event.venue),
+        time: (`events[${index}][time]`, event.time),
+        date: (`events[${index}][date]`, event.date),
+        coordinatorName:
+          (`events[${index}][coordinatorName]`, event.coordinatorName),
+        coordinatorNumber:
+          (`events[${index}][coordinatorNumber]`, event.coordinatorNumber),
+        eventFee: (`events[${index}][eventFee]`, event.eventFee),
+        rules: (`events[${index}][rules]`, event.rules),
+        avatar: (`events[${index}][avatar]`, event.avatar),
       });
       newErrors[index] = errors;
     });
@@ -241,10 +242,7 @@ const SubEvent = () => {
 
     if (allErrors.length === 0) {
       try {
-        const result = await postData("registration/mainevent", requestBody);
-        // const result = await response.json();
-
-        // Handle response
+        const result = await postData("registration/addevents", requestBody);
         if (result) {
           Swal.fire({
             icon: "success",
