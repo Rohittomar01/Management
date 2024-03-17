@@ -1,0 +1,67 @@
+#p {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white; /* Set border width and color */
+  border-radius: 70px;
+  padding: 45px;
+  width: 45px;
+  height: 45px;
+}
+
+span {
+  text-align: center;
+}
+
+#countdown_container {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+}
+
+/* for mobile responsive */
+@media only screen and (max-width:426px) {
+  #p {
+    padding: 15px;
+    width: 42px;
+    font-size: small;
+    height: 42px;
+  
+  }
+  #countdown_container {
+    width: 92vw;
+  }
+}
+@media (max-width:1024px) and (min-width:427px){
+  #countdown_container {
+    width: 60vw;
+  }
+}
+@media only screen and (min-width:1026px) {
+  #p {
+    padding: 20px;
+    width: 65px;
+    font-size: large;
+    height: 65px;
+  }
+
+  #countdown_container {
+    width: 40vw;
+  }
+}
+
+
+/* for 4k responsive  */
+@media only screen and (min-width: 1500px) {
+  #p {
+    padding: 50px;
+    width: 15px;
+    height: 15px;
+    font-size: 1rem;
+    border-radius: 170px;
+  }
+  #countdown_container {
+    width: 47vw;
+    display: flex;
+    justify-content: space-between;
+  }
+}

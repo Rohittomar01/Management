@@ -35,7 +35,7 @@ export default function SportEvent() {
     var classes = useStyles()
     var navigate = useNavigate()
     return (
-        <div style={{ backgroundImage: `url("https://cdn.pixabay.com/photo/2016/12/14/13/59/ball-1906468_1280.png")`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "75%", height: "100vh" }}>
+        <div style={{ backgroundImage:`url("https://cdn.pixabay.com/photo/2016/12/14/13/59/ball-1906468_1280.png")`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "75%", height: "100vh" }}>
             <div>
                 <Box sx={{ flexGrow: 1, }}>
                     <AppBar position="fixed" sx={{ background: "#ff5e57" }}>
