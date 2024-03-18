@@ -1,48 +1,77 @@
-import { AppBar, Button, Grid, Paper } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import '../../StyleSheets/Footer.css';
+import React from "react";
+import { Box, Typography, Link, IconButton } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer() {
-
-
-
+const Footer = () => {
   return (
-    <div >
+    <Box
+      sx={{
+        background: "linear-gradient(to right, #bc4e9c, #f80759)",
+        padding: "20px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        minHeight: "100px", // Set minimum height
+        marginTop: "20px", // Add top margin
+      }}
+    >
+      <Typography variant="body1" color="white">
+        ©Copyright 2008 IPS College of Technology & Management. All rights
+        reserved.
+      </Typography>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+        <Typography variant="caption" color="white">
+          Shivpuri Link Road, Gwalior, Madhya Pradesh, 474001
+        </Typography>
+        <Typography variant="caption" color="white">
+          Phone: 9285052400, 9285032400 | Email: info@ipsgwalior.org
+        </Typography>
+      </Box>
+      <Box sx={{ display: "flex", gap: "10px" }}>
+        <Link
+          href="https://www.facebook.com/ipsgocgwalior"
+          underline="none"
+          color={"#000"}
+          target="_new"
+        >
+          <IconButton color="inherit">
+            <FontAwesomeIcon icon={faFacebook} />
+          </IconButton>
+        </Link>
 
-      <footer style={{background:"#ff5e57"}}>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <h4 style={{color:"#fff",fontFamily:"serif"}}>About</h4>
-              <p style={{ textAlign: 'justify',color:"#fff",fontFamily:"serif" }}>Youngsters eagerly look forward for college life as it is full of fun and frolic. Live experiences of these fun activities and events are unforgettable their entire life. Life @ IPS gives them heartfelt,touching moments to share with friends and relatives. We organise various activities for our students throughout the year which not only improve their personality but also give freedom from monotonous routine of studies.</p>
-            </div>
-            <div className="col-md-4">
-              <h4 style={{color:"#fff",fontFamily:"sans-serif"}}>Quick Links</h4>
-              <ul>
-                <li><a href="#" style={{color:"#fff",fontFamily:"serif"}}>Home</a></li>
-                <li><a href="#" style={{color:"#fff",fontFamily:"serif"}}>Events</a></li>
-                <li><a href="#" style={{color:"#fff",fontFamily:"serif"}}>About Us</a></li>
-                <li><a href="#" style={{color:"#fff",fontFamily:"serif"}}>Contact Us</a></li>
-              </ul>
-            </div>
-            <div className="col-md-4">
-              <h4 style={{color:"#fff",fontFamily:"serif"}}>Contact Us</h4>
-              <p  style={{color:"#fff",fontFamily:"serif"}}>IPS College of Technology & Management,<br /> Shivpuri Link Road Gwalior, Madhya Pradesh, 474001</p>
-              <p style={{color:"#fff",fontFamily:"serif"}}>Phone: 9285052400, 9285032400</p>
-              <p style={{color:"#fff",fontFamily:"serif"}}>Email: info@ipsgwalior.org</p>
-            </div>
+        <IconButton color="inherit">
+          <FontAwesomeIcon icon={faTwitter} />
+        </IconButton>
 
-          </div>
-        </div>
-      </footer>
-    </div>
+        <Link
+          href="https://www.instagram.com/ipscollegegwalior?igsh=MXR1YWs2d3pzaXo3Yw=="
+          underline="none"
+          color={"#000"}
+          target="_new"
+        >
+          <IconButton color="inherit">
+            <FontAwesomeIcon icon={faInstagram} />
+          </IconButton>
+        </Link>
+        <Link
+          href="https://www.linkedin.com/school/ipsgwalior/"
+          underline="none"
+          color={"#000"}
+          target="_new"
+        >
+          <IconButton color="inherit">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </IconButton>
+        </Link>
+      </Box>
+    </Box>
+  );
+};
 
-
-
-  )
-
-}
+export default Footer;

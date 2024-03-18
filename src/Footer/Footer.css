@@ -1,39 +1,26 @@
-#main-container-footer{
-    background-color: black;
-    width: "100%";
-    height: 'auto';
-    padding: 7%;
-}
-#logo{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: row;
-}
-#logo-description{
-    font-size: 2rem;
-    font-family: serif;
-    font-weight: 800;
-    margin-left: 10px;
-}
-#main-container-footer a{
-    
-    color: white ;
-}
-#contact{
-    font-size: 1.5rem;
-    font-weight: bold;
-    /* font-family: serif; */
-}
-#address{
-    font-size: medium;
-    font-weight: 600;
-    /* font-family: serif; */
-    line-height: 25px;
-}
-#contact-details{
-    font-size: medium;
-    font-weight: 500px;
-    /* font-family: serif; */
-    line-height: 25px;
-}
+/* Footer.module.css */
+.footer {
+    color: #333; /* Adjust text color */
+  }
+  
+  .footer a {
+    color: #007bff; /* Adjust link color */
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 600px) {
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .footer h6 {
+      margin-bottom: 10px;
+    }
+  }
+  
