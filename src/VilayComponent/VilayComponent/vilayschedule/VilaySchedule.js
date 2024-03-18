@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Typography, Paper, Grid, Button } from "@mui/material";
-import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 // import Zoom from 'react-reveal/Zoom';
 import "./TechnoScheduleCss.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -14,7 +13,7 @@ function VilaySchedule() {
   const xlg = useMediaQuery("(min-width:1500px)");
 
   const [events, setEvents] = useState([]);
-  const [total, setTotal] = useState([]);
+  // const [total, setTotal] = useState([]);
 
   // const fetchEvents = async () => {
   //   var result = await getData("eventcard/get_event_details")

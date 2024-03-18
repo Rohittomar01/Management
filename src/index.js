@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import { FirebaseProvider } from './PushNotification/Firebase.jsx';
-import DoubleScrollbar from 'react-double-scrollbar';
+// import DoubleScrollbar from 'react-double-scrollbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

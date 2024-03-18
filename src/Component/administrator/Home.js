@@ -120,18 +120,33 @@ export default function Homepage() {
   // }
 
   const fetchSponsorImg = async () => {
-    var result = await getData("index/showsponsorimg");
-    // alert(result)
-    console.log(result.data);
-    setSponsor(result.data);
+    try {
+      var result = await getData("index/showsponsorimg");
+      if (result && result.data) {
+        // console.log(result.data);
+        setSponsor(result.data);
+      } else {
+        console.error('No data received from fetchSponsorImg');
+      }
+    } catch (error) {
+      console.error('fetchSponsorImg encountered an error:', error);
+    }
   };
+  
   const fetchTitle = async () => {
-    var result = await getData("index/fetchtitle");
-    // alert(result)
-    console.log(result.data);
-    setTitle(result.data);
+    try {
+      var result = await getData("index/fetchtitle");
+      if (result && result.data) {
+        // console.log(result.data);
+        setTitle(result.data);
+      } else {
+        console.error('No data received from fetchTitle');
+      }
+    } catch (error) {
+      console.error('fetchTitle encountered an error:', error);
+    }
   };
-
+  
   useEffect(() => {
     fetchSponsorImg();
     fetchTitle();
@@ -145,9 +160,9 @@ export default function Homepage() {
   }, []);
 
   const fillImg = () => {
-    return sponsor.map((item) => {
+    return sponsor.map((item,index) => {
       return (
-        <div>
+        <div key={index}  >
           {" "}
           <Box>
             <img
@@ -240,7 +255,7 @@ export default function Homepage() {
 
                   <Grid
                     item
-                    xs={{ matches: 1 }}
+                    // xs={{ matches: 1 }}
                     style={{
                       display: "flex",
                       justifyContent: "space-around",

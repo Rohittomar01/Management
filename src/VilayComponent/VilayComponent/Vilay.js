@@ -7,19 +7,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { React, createRef } from "react";
 import Slider from "react-slick";
-import { getData, postData, serverURL } from "../../Services/ServerServices";
+import { getData, serverURL } from "../../Services/ServerServices";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Avatar, Grid, Paper } from "@mui/material";
+import { Grid, } from "@mui/material";
 import { TechnoparvCss } from "./TechnoparvCss";
 // import Footer from '../Component/administrator/Footer';
 import { useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import ScheduleSection from "./ScheduleSection";
-// import TechnoparvDay01 from './TechnoparvDay01';
-import TechnoparvDay02 from "./TechnoparvDay02";
-import TechnoparvDay03 from "./TechnoparvDay03";
-import TechnoparvDay04 from "./TechnoparvDay04";
 import EventCard from "./EventCard";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -31,7 +25,7 @@ export default function Vilay() {
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   var classes = TechnoparvCss();
-  const [btnStatus, setBtnStatus] = useState(false);
+  // const [btnStatus, setBtnStatus] = useState(false);
   const [image, setImage] = useState([]);
   // ******************USED FOR Slider*****************************************
   var settings = {
@@ -86,19 +80,19 @@ export default function Vilay() {
     "3.jpg",
     "12.jpg",
   ];
-  function playImg() {
-    return image.map((item) => {
-      return (
-        <div>
-          <img
-            alt={"image"}
-            src={`${serverURL}/uploaded/${item.slidepicl}`}
-            style={{ width: "100%", height: !matches ? "90vh" : "50vh" }}
-          ></img>
-        </div>
-      );
-    });
-  }
+  // function playImg() {
+  //   return image.map((item) => {
+  //     return (
+  //       <div>
+  //         <img
+  //           alt={"image"}
+  //           src={`${serverURL}/uploaded/${item.slidepicl}`}
+  //           style={{ width: "100%", height: !matches ? "90vh" : "50vh" }}
+  //         ></img>
+  //       </div>
+  //     );
+  //   });
+  // }
 
   function play() {
     return images.map((item) => {

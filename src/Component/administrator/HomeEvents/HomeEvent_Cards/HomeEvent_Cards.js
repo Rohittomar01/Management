@@ -49,9 +49,9 @@ export default function HomeEvent_Cards() {
   ];
 
   const showCards = () => {
-    return detail.map((item) => {
+    return detail.map((item,index) => {
       return (
-        <Box style={{ marginTop: "2%", margin: "2%" }}>
+        <Box key={index}  style={{ marginTop: "2%", margin: "2%" }}>
           <Box>
           <Box component={'div'} style={{paddingLeft: sm?"15%":''}}>
               <Avatar
