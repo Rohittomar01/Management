@@ -15,9 +15,8 @@ import StudentSigninPage from "./Component/administrator/StudentSigninPage";
 import RazorPay from "./Component/administrator/RazorPay";
 import Vilay from "./VilayComponent/VilayComponent/Vilay";
 import VilayDanceEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilayDanceEvent";
-import vilayCreativityEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilayCreativityEvent";
-import vilayMusicEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilayMusicEvent";
-import vilayLiteraryEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilayLiteraryEvent";
+import VilayLiteraryEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilayLiteraryEvent"
+import VilaySportsEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilaySpotsEvent";
 import VilayCreativityEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilayCreativityEvent";
 import VilayMusicEvent from "./VilayComponent/VilayComponent/Vilay-Sub-Component/VilayMusicEvent";
 import MobileEventCard from "./Component/administrator/MobileEventCard";
@@ -84,6 +83,8 @@ function App() {
           path={"/vilaycreativity"}
         ></Route>
         <Route element={<VilayMusicEvent />} path={"/vilaymusic"}></Route>
+        <Route element={<VilayLiteraryEvent />} path={"/vilayliterary"}></Route>
+        <Route element={<VilaySportsEvent />} path={"/vilaysports"}></Route>
         <Route element={<MobileEventCard />} path={"/mobileevent"}></Route>
 
         {/* *******************Technoparv */}
