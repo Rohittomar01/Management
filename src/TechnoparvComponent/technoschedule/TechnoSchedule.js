@@ -5,42 +5,67 @@ import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import "./TechnoScheduleCss.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useNavigate } from "react-router-dom";
-
+import { getData } from "../../Services/ServerServices";
 
 function TechnoSchedule() {
-
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const mobile = useMediaQuery("(max-width:650px)");
   const xlg = useMediaQuery("(min-width:1500px)");
 
   const [events, setEvents] = useState([]);
   const [total, setTotal] = useState([]);
 
-  // const fetchEvents = async () => {
-  //   var result = await getData("eventcard/get_event_details")
-  //   if (result.status) {
-  //     // console.log("dataa", result.data)
-  //     const data = await result.data
-  //     setEvents(data)
-  //   }
-  //   else {
-  //     console.log("error")
-  //   }
-  // }
-  // const fetchTotal = async () => {
-  //   var result = await getData("eventcard/get_event_total")
-  //   if (result.status) {
-  //     console.log("dataa", result.data)
-  //      const std = await result.data
-  //      setTotal(std)
+  const fetchEvents = async () => {
+    var result = await getData("eventcard/get_event_details");
+    if (result.status) {
+      // console.log("dataa", result.data)
+      const data = await result.data;
+      setEvents(data);
+    } else {
+      console.log("error");
+    }
+  };
+  const fetchTotal = async () => {
+    var result = await getData("eventcard/get_event_total");
+    if (result.status) {
+      console.log("dataa", result.data);
+      const std = await result.data;
+      setTotal(std);
+    } else {
+      console.log("error");
+    }
+  };
 
-  //   }
-  //   else {
-  //     console.log("error")
-  //   }
-  // }
+  const getStorageData = (ADMIN, defaultValue) => {
+
+    const savedItem = localStorage.getItem("ADMIN");
+    const parsedItem = JSON.parse(savedItem);
+
+    return parsedItem || defaultValue
+
+
+}
+
+const [items, setItems] = useState(getStorageData());
+
+const handleClick = (rowData) => {
+    if (items) {
+        const feeValue=rowData.fee
+       
+        navigate("/RazorPay", { state: { fee:feeValue} })
+       
+        
+    }
+    else {
+        navigate("/RegistrationPage")
+    }
+}
+
 
   useEffect(() => {
+    getStorageData();
+    fetchTotal();
+    fetchEvents();
     setEvents([...eventCards.slice(-4)]);
   }, []);
 
@@ -145,6 +170,7 @@ function TechnoSchedule() {
                     variant="contained"
                     color="primary"
                     className="Event-card-joinbtn"
+                    onClick={(e)=>handleClick(item)}
                   >
                     Join Now
                   </Button>
@@ -193,11 +219,11 @@ function TechnoSchedule() {
       <div class="grid-container">{fillEvents()}</div>
       <div>
         <Button
-        onClick={()=>navigate("/ViewAll_TechnoSchedule")}
-        fullWidth
+          onClick={() => navigate("/ViewAll_TechnoSchedule")}
+          fullWidth
           variant="outlined"
           style={{
-            marginTop:"2%",
+            marginTop: "2%",
             color: "rgb(4, 184, 4)",
             textAlign: "center",
             fontWeight: 400,

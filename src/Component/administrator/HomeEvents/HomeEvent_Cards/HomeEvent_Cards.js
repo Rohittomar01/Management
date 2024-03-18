@@ -59,7 +59,7 @@ export default function HomeEvent_Cards() {
                 src={item.image}
                 sx={{
                   width: sm ? "62vw" : "17.5vw",
-                  height: sm ? "12.5rem" : "35vh",
+                  height: sm ? "12.5rem" : "37vh",
                   boxShadow: "10px 10px 10px var(--cream)",
                   cursor:'pointer'
                 }}

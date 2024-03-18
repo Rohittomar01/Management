@@ -580,10 +580,10 @@ export default function Homepage() {
                 </div>
               </Zoom>
 
-              <div className="d-flex justify-content-evenly col-12 flex-wrap sponserlogo ">
+              <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <Zoom>
                   {" "}
-                  <div className="d-flex flex-row justify-content-around  flex-wrap  sponsorimg">
+                  <div className="d-flex flex-row justify-content-around  flex-wrap mt-2  sponsorimg">
                     {fillImg()}
                   </div>
                 </Zoom>
