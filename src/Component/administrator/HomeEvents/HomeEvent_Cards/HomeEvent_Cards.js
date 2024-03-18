@@ -33,14 +33,14 @@ export default function HomeEvent_Cards() {
     },
     {
       id: 3,
-      heading: "IBTD",
+      heading: "IBTIDA",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxBjQ6cacjUhWGAxXt_j-UgOdQhDAo3ce9Eg&usqp=CAU",
         link:"/IBTD"
     },
     {
         id: 4,
-        heading: "IBTD",
+        heading: "ADIEU",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFcNXKooXNHsLgAZa8s0jJB6voQ_j6O9a3w&usqp=CAU",
           link:"IBTD"
@@ -71,7 +71,7 @@ export default function HomeEvent_Cards() {
                   variant="contained"
                   style={{
                     background: "white",
-                    color: "green",
+                    color: "#F2550C",
                     borderRadius: 70,
                     height: sm?"10vh":"8vh",
                     width: sm?"61vw":"17.5vw",
