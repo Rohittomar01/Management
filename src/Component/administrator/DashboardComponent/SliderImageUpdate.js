@@ -1,7 +1,7 @@
 import React from "react"
 import MaterialTable from "@material-table/core"
 import { useState, useEffect } from "react"
-import { getData, postData, serverURL } from "../../../services/serverservices"
+import { getData, postData, serverURL } from "../../../Services/ServerServices"
 import { Avatar } from "@mui/material"
 import './imageCss.css'
 import Swal from "sweetalert2"

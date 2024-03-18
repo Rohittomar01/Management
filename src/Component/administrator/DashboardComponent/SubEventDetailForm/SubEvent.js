@@ -54,124 +54,24 @@ const SubEvent = () => {
   const handleImageUpload = (e, index) => {
     const file = e.target.files[0];
     const newEvents = [...events];
-    newEvents[index].avatar = file;
+    newEvents[index] = {
+      ...newEvents[index],
+      avatar: file,
+    };
     setEvents(newEvents);
+    console.log("new events: ", newEvents);
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   let newErrors = {};
-  //   const allErrors = [];
-  //   const formData = new FormData();
-
-  //   console.log("Events:", events);
-  //   console.log("Image:", image);
-
-  //   events.forEach((event, index) => {
-  //     const errors = {};
-  //     if (!event.eventName) {
-  //       errors.eventName = "Event Name is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.description) {
-  //       errors.description = "Description is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.venue) {
-  //       errors.venue = "Venue is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.time) {
-  //       errors.time = "Time is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.date) {
-  //       errors.date = "Date is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.coordinatorName) {
-  //       errors.coordinatorName = "Coordinator Name is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.coordinatorNumber) {
-  //       errors.coordinatorNumber = "Coordinator Number is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.eventFee) {
-  //       errors.eventFee = "Event Fee is required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.rules) {
-  //       errors.rules = "Rules are required";
-  //       allErrors.push({ ...errors });
-  //     }
-  //     if (!event.avatar) {
-  //       errors.avatar = "Image is required";
-  //       allErrors.push({ ...errors });
-  //     }
-
-  //     // Append event data to FormData
-  //     formData.append("maineventname", maineventName);
-  //     formData.append(`events[${index}][eventName]`, event.eventName);
-  //     formData.append(`events[${index}][description]`, event.description);
-  //     formData.append(`events[${index}][venue]`, event.venue);
-  //     formData.append(`events[${index}][time]`, event.time);
-  //     formData.append(`events[${index}][date]`, event.date);
-  //     formData.append(
-  //       `events[${index}][coordinatorName]`,
-  //       event.coordinatorName
-  //     );
-  //     formData.append(
-  //       `events[${index}][coordinatorNumber]`,
-  //       event.coordinatorNumber
-  //     );
-  //     formData.append(`events[${index}][eventFee]`, event.eventFee);
-  //     formData.append(`events[${index}][rules]`, event.rules);
-  //     formData.append(`events[${index}][avatar]`, event.avatar);
-
-  //     newErrors[index] = errors;
-  //   });
-
-  //   // Append image to FormData
-  //   if (image) {
-  //     formData.append("image", image);
-  //   }
-  //   console.log("FormData:", formData);
-
-  //   if (allErrors.length === 0) {
-  //     var result = await postData("registration/mainevent", formData);
-  //     // ******************************************************************************************************************
-
-  //     // *******For Alert***********
-  //     if (result.status) {
-  //       Swal.fire({
-  //         icon: "success",
-  //         title: result.message,
-  //       });
-  //     } else {
-  //       Swal.fire({
-  //         icon: "success",
-  //         title: "Server Error",
-  //       });
-  //     }
-  //     // *****************************
-  //     // handleResetClick();
-  //   } else {
-  //     setErrors(newErrors);
-  //   }
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     let newErrors = {};
     const allErrors = [];
-    const formData = new FormData();
-    const requestBody = {
+    const body = {
       events: [],
     };
 
     console.log("Events:", events);
-    console.log("Image:", image);
+    console.log("Image:", events[0].avatar);
 
     events.forEach((event, index) => {
       const errors = {};
@@ -211,13 +111,13 @@ const SubEvent = () => {
         errors.rules = "Rules are required";
         allErrors.push({ ...errors });
       }
-      if (!event.avatar) {
-        errors.avatar = "Image is required";
-        allErrors.push({ ...errors });
-      }
+      // if (!event.avatar) {
+      //   errors.avatar = "Image is required";
+      //   allErrors.push({ ...errors });
+      // }
 
       // Append event data to FormData
-      requestBody.events.push({
+      body.events.push({
         eventName: (`events[${index}][eventName]`, event.eventName),
         description: (`events[${index}][description]`, event.description),
         venue: (`events[${index}][venue]`, event.venue),
@@ -234,15 +134,11 @@ const SubEvent = () => {
       newErrors[index] = errors;
     });
 
-    // Append image to FormData
-    if (image) {
-      requestBody.image = image;
-    }
-    console.log("RequestBody:", requestBody);
+    console.log("body:", body);
 
     if (allErrors.length === 0) {
       try {
-        const result = await postData("registration/addevents", requestBody);
+        const result = await postData("admin/addevents", body);
         if (result) {
           Swal.fire({
             icon: "success",
@@ -252,7 +148,7 @@ const SubEvent = () => {
           Swal.fire({
             icon: "error",
             title: "Server Error",
-            text: result.error,
+            text: "Unknown error occurred",
           });
         }
       } catch (error) {
