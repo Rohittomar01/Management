@@ -6,6 +6,7 @@ import "./ViewAll_TechnoScheduleCss.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
+import { getData } from "../../../../Services/ServerServices";
 
 function ViewAll_VilaySchedule() {
 
@@ -17,94 +18,95 @@ function ViewAll_VilaySchedule() {
   const [events, setEvents] = useState([]);
   const [total, setTotal] = useState([]);
 
-  // const fetchEvents = async () => {
-  //   var result = await getData("eventcard/get_event_details")
-  //   if (result.status) {
-  //     // console.log("dataa", result.data)
-  //     const data = await result.data
-  //     setEvents(data)
-  //   }
-  //   else {
-  //     console.log("error")
-  //   }
-  // }
-  // const fetchTotal = async () => {
-  //   var result = await getData("eventcard/get_event_total")
-  //   if (result.status) {
-  //     console.log("dataa", result.data)
-  //      const std = await result.data
-  //      setTotal(std)
+  const fetchEvents = async () => {
+    var result = await getData("eventcard/get_event_details")
+    if (result.status) {
+      // console.log("dataa", result.data)
+      const data = await result.data
+      setEvents(data)
+    }
+    else {
+      console.log("error")
+    }
+  }
+  const fetchTotal = async () => {
+    var result = await getData("eventcard/get_event_total")
+    if (result.status) {
+      console.log("dataa", result.data)
+       const std = await result.data
+       setTotal(std)
 
-  //   }
-  //   else {
-  //     console.log("error")
-  //   }
-  // }
+    }
+    else {
+      console.log("error")
+    }
+  }
 
   useEffect(() => {
-    setEvents(eventCards);
+    // setEvents(eventCards);
+    fetchEvents()
   }, []);
 
-  var eventCards = [
-    {
-      id: 1,
-      event_name: "Events Name",
-      event_description: "Description",
-      event_date: "01-02-2024",
-      event_time: "10:20AM",
-      event_location: "Venue",
-      event_price: "100",
-    },
-    {
-      id: 2,
-      event_name: "Events Name",
-      event_description: "Description",
-      event_date: "01-02-2024",
-      event_time: "10:20AM",
-      event_location: "Venue",
-      event_price: "200",
-    },
-    {
-      id: 3,
-      event_name: "Events Name",
-      event_description: "Description",
-      event_date: "01-02-2024",
-      event_time: "10:20AM",
-      event_location: "Venue",
-      event_price: "300",
-    },
-    {
-      id: 4,
-      event_name: "Events Name",
-      event_description: "Description",
-      event_date: "01-02-2024",
-      event_time: "10:20AM",
-      event_location: "Venue",
-      event_price: "400",
-    },
-    {
-      id: 5,
-      event_name: "Events Name",
-      event_description: "Description",
-      event_date: "01-02-2024",
-      event_time: "10:20AM",
-      event_location: "Venue",
-      event_price: "500",
-    },
-    {
-      id: 6,
-      event_name: "Events Name",
-      event_description: "Description",
-      event_date: "01-02-2024",
-      event_time: "10:20AM",
-      event_location: "Venue",
-      event_price: "600",
-    },
-  ];
+  // var eventCards = [
+  //   {
+  //     id: 1,
+  //     event_name: "Events Name",
+  //     event_description: "Description",
+  //     event_date: "01-02-2024",
+  //     event_time: "10:20AM",
+  //     event_location: "Venue",
+  //     event_price: "100",
+  //   },
+  //   {
+  //     id: 2,
+  //     event_name: "Events Name",
+  //     event_description: "Description",
+  //     event_date: "01-02-2024",
+  //     event_time: "10:20AM",
+  //     event_location: "Venue",
+  //     event_price: "200",
+  //   },
+  //   {
+  //     id: 3,
+  //     event_name: "Events Name",
+  //     event_description: "Description",
+  //     event_date: "01-02-2024",
+  //     event_time: "10:20AM",
+  //     event_location: "Venue",
+  //     event_price: "300",
+  //   },
+  //   {
+  //     id: 4,
+  //     event_name: "Events Name",
+  //     event_description: "Description",
+  //     event_date: "01-02-2024",
+  //     event_time: "10:20AM",
+  //     event_location: "Venue",
+  //     event_price: "400",
+  //   },
+  //   {
+  //     id: 5,
+  //     event_name: "Events Name",
+  //     event_description: "Description",
+  //     event_date: "01-02-2024",
+  //     event_time: "10:20AM",
+  //     event_location: "Venue",
+  //     event_price: "500",
+  //   },
+  //   {
+  //     id: 6,
+  //     event_name: "Events Name",
+  //     event_description: "Description",
+  //     event_date: "01-02-2024",
+  //     event_time: "10:20AM",
+  //     event_location: "Venue",
+  //     event_price: "600",
+  //   },
+  // ];
 
   const fillEvents = () => {
-    return events.map((item) => (
-      <div class="grid-item" id={item.id}>
+    return events.map((item,index) => (
+      <div key={index} class="grid-item" id={item.id}>
         {/* <Zoom> */}
         <Paper elevation={3} className="paper">
           <Grid container spacing={3}>

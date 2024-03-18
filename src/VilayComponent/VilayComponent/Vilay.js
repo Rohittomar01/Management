@@ -10,7 +10,7 @@ import Slider from "react-slick";
 import { getData, serverURL } from "../../Services/ServerServices";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Grid, } from "@mui/material";
+import { Grid } from "@mui/material";
 import { TechnoparvCss } from "./TechnoparvCss";
 // import Footer from '../Component/administrator/Footer';
 import { useEffect, useState } from "react";
@@ -19,6 +19,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import VilaySchedule from "./vilayschedule/VilaySchedule";
 import "./Videos/videoCss.css";
+import Footer from "../../Component/administrator/Footer";
 
 export default function Vilay() {
   const theme = useTheme();
@@ -310,7 +311,7 @@ export default function Vilay() {
       >
         <Slider {...gallery}>{plays()}</Slider>
       </div>
-
+      <Footer />
       {/* <div style={{ marginTop: "7%" }}><hr></hr> <Footer /></div> */}
     </div>
   );
